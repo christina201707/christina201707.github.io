@@ -1,0 +1,116 @@
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.photo img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 999px;
+}
+/*
+.photo img:hover {
+    filter: grayscale(100%);
+    max-width: 120%;
+}*/
+
+.photo{
+    width: 200px;
+    margin: 50px auto;
+}
+
+.top{
+    position: fixed;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffd16c;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 0 10px #888888;
+}
+
+.work-item{
+    position: relative;
+    flex-shrink: 0;
+    flex-basis: 33.3333%;
+    padding: 2px;
+    box-sizing: border-box;
+    line-height: 0;
+}
+
+.works{
+    /*display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;*/
+    display: grid;
+    grid-template-areas: 
+    'w1 w3 w3'
+    'w2 w3 w3'
+    'w4 w5 w6'
+    ;
+}
+
+.x1{
+    grid-area: w1;
+}
+.x2{
+    grid-area: w2;
+}
+.x3{
+    grid-area: w3;
+}
+.x4{
+    grid-area: w4;
+}
+.x5{
+    grid-area: w5;
+}
+.x6{
+    grid-area: w6;
+}
+
+.work-item img{
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    line-height: 0;
+}
+
+.work-item:hover img{
+    filter: blur(3px);
+}
+
+.overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /*top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+    inset: 0;
+    background-color: rgb(0,0,0,0.6);
+    color: #fff;
+    opacity: 0;
+    /*透明度*/
+    pointer-events: none;
+}
+
+.work-item:hover .overlay{
+    opacity: 1;
+}
+
+/*
+.name{
+    position:fixed;
+    top: 0;
+    left: 50px;
+    text-align: center;
+}*/
